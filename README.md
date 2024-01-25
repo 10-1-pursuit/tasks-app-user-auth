@@ -105,6 +105,15 @@ Add these underneath line 8, and don't forget the comma on line 8!
 "db:seed": "psql -U postgres -f db/seed.sql"
 ```
 
+### Add your Environment variables to `.env`:
+```env
+PORT=4000
+PG_HOST=localhost
+PG_PORT=5432
+PG_DATABASE=task_app
+PG_USER=postgres
+```
+
 Now we're ready to run our SQL files so we have our db set up and seeded w some data. In the terminal, run:
 - `npm run db:init`
 - `npm run db:seed`
@@ -292,5 +301,6 @@ tasks.delete('/:id', async (req, res) => {
     }
 })
 ```
+
 
 ## Part 2: [Adding a User Model & Authentication]()
