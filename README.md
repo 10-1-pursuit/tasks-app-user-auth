@@ -193,7 +193,7 @@ Don't forget to `import the functions` we write in our `tasks.js` file into our 
 ```js
 const getTask = async (id) => {
     try {
-        const task = db.one("SELECT * FROM tasks WHERE task_id=$1", id)
+        const task = await db.one("SELECT * FROM tasks WHERE task_id=$1", id)
         return task
     } catch (err) {
         return err
