@@ -149,7 +149,6 @@ You may notice that we are generating a token when a user is created. That is pu
 
 ```js
 const logInUser = async (user) => {
-    const logInUser = async (user) => {
     try {
         const loggedInUser = await db.oneOrNone("SELECT * FROM users WHERE username=$1", user.username)
         // console.log(loggedInUser)
