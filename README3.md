@@ -203,12 +203,12 @@ const [user, setUser] = useState(null)
 const [token, setToken] = useState(null)
 ```
 
-Hand both of the functions down to your <Signup/> components as props inside of your <Route>, so you can update your state:
+Hand both of the functions down to your `<Signup/>` component as props inside of your `<Route>`, so you can update your state:
 ```jsx
 <Route path="/signup" element={<Signup setUser={setUser} setToken={setToken} />} />
 ```
 
-Now back in your <Signup/> receive them as props, and use them inside of your fetch call to update your state.
+Now back in your `<Signup/>` receive them as props, and use them inside of your fetch call to update your state.
 
 #### Components/Signup.jsx
 ```jsx
@@ -229,9 +229,9 @@ if(res.user.user_id){
 Now when you sign up, you should see your state variables update. You can verify this in your React dev tools.
 
 
-Great. Let's update the <NavBar/> so that it shows the user's username and a Logout button when a user is logged in:
+Great. Let's update the `<NavBar/>` so that it shows the user's username and a Logout button when a user is logged in:
 
-In <App/> give the <NavBar/> the `user` `setUser` and `setToken` as props.
+In `<App/>` give the `<NavBar/>` the `user` `setUser` and `setToken` as props.
 
 Then receive those props in your NavBar so we can use them.
 
@@ -245,7 +245,7 @@ const handleLogout = () => {
 }
 ```
 
-Now under your <Nav.Brand>, we have out <Nav> that contains our Login and Signup button. We only want to see those buttons when a user is not signed in.
+Now under your `<Nav.Brand>`, we have out `<Nav>` that contains our Login and Signup button. We only want to see those buttons when a user is not signed in.
 
 Update it so that they only render when there is no user saved in our App's state:
 ```jsx
@@ -360,9 +360,9 @@ const Login = ({ setUser, setToken }) => {
 export default Login;
 ```
 
-Back in your <App/> component, make sure to import the Login component, make a <Route> for it and hand it down the `setUser` and `setToken` props.
+Back in your `<App/>` component, make sure to import the Login component, make a `<Route>` for it and hand it down the `setUser` and `setToken` props.
 
-This is what your <App/> component should look like at this point:
+This is what your `<App/>` component should look like at this point:
 
 #### App.jsx
 ```jsx
@@ -392,5 +392,4 @@ function App() {
 }
 
 export default App
-
 ```
