@@ -3,7 +3,7 @@
 - Create the app `npm create vite@4 tasks-frontend`
 - Change into the directory`cd tasks-frontend`
 - Install packages `npm i`
-- Install React Router DOM & Bootstrap: `npm i reactbootstrap bootstrap react-router-dom`
+- Install React Router DOM & Bootstrap: `npm i react-bootstrap bootstrap react-router-dom`
 - Open in VSCode: `code .`
 - `touch .env`
 - Add `.env` to `.gitignore`
