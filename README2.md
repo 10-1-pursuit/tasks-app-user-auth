@@ -184,9 +184,11 @@ users.post('/login', async (req, res) => {
         const token = jwt.sign({ userId: user.user_id, username: user.username }, secret);
 
         res.status(200).json({ 
-            id: user.user_id, 
-            user: user.username, 
-            email: user.email, 
+            user: {
+                user_id: user.user_id, 
+                username: user.username, 
+                email: user.email
+            }, 
             token 
         });
     } catch (err) {
